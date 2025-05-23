@@ -1,20 +1,37 @@
-# Welcome to your CDK TypeScript project
+# Backend
 
-This is a blank project for CDK development with TypeScript.
+The backend infrastructure is built on **Amazon Web Services (AWS)**, using a serverless architecture to ensure scalability and cost-efficiency. Key AWS services used include:
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+- **API Gateway** – Handles HTTP requests.
+- **AWS Lambda** – Runs serverless backend functions.
+- **S3** – Stores user-generated and processed images.
+- **DynamoDB** – Manages structured, scalable data storage.
 
-## Useful commands
+## Infrastructure as Code
 
-- `npm run build` compile typescript to js
-- `npm run watch` watch for changes and compile
-- `npm run test` perform the jest unit tests
-- `npx cdk deploy` deploy this stack to your default AWS account/region
-- `npx cdk diff` compare deployed stack with current state
-- `npx cdk synth` emits the synthesized CloudFormation template
+To manage the backend infrastructure efficiently, we use:
 
-## AWS related
+- **AWS CloudFormation**  
+  Initially used for defining infrastructure as YAML templates, enabling reproducible deployments.
 
-- aws configure
-- tsc
-- cdk deploy --all
+- **AWS CDK (Cloud Development Kit)**  
+  To simplify development and maintenance, we transitioned to AWS CDK. It allows us to define infrastructure using familiar programming languages (JavaScript, in our case), offering:
+  - Type checking
+  - Object-oriented design
+  - Easier readability and refactoring compared to raw YAML/JSON
+
+## Benefits of CDK
+
+- Rapid deployment and updates
+- Improved developer experience
+- Reusable and modular infrastructure code
+
+## Tech Stack
+
+- **AWS Lambda** – Serverless backend logic
+- **API Gateway** – REST API interface
+- **Amazon S3** – File and asset storage
+- **Amazon DynamoDB** – NoSQL database
+- **AWS CDK** – Infrastructure as code (in JavaScript)
+- **Node.js** – Runtime environment for Lambda functions
+- **CloudFormation** – Infrastructure templating
